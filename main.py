@@ -15,12 +15,17 @@ if __name__ == "__main__":
 
     write_to_input_file(day_number)
 
-    mod = import_module("day_1.solution")
+    mod = import_module(f"day_{day_number}.solution")
     solution_one = getattr(mod, "solution_one")
     solution_two = getattr(mod, "solution_two")
 
     test_input_one = get_test_input(day_number, 1)
-    test_input_two = get_test_input(day_number, 2)
+
+    try:
+        test_input_two = get_test_input(day_number, 2)
+    except:
+        test_input_two = get_test_input(day_number, 1)
+
     real_input = get_real_input(day_number)
 
     test_solution_one = solution_one(test_input_one)
