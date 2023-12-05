@@ -100,7 +100,6 @@ def calculate_gear_ratio_sum(dict):
 
 def solution_two(problem_input):
     grid = text_to_list(problem_input)
-    total = 0
 
     MAX_ROW_INDEX = len(grid) - 1
     MAX_COL_INDEX = len(grid[0]) - 1
