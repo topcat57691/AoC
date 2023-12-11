@@ -4,3 +4,7 @@ def text_to_list(text):
 
 def text_to_int_list(text):
     return [list(map(int, line.split())) for line in text.split("\n") if line.strip()]
+
+
+def text_to_grid(text):
+    return [[*line] for line in text.split("\n")]

@@ -14,3 +14,14 @@ class UtilsTest(unittest.TestCase):
         self.assertEqual(
             text_to_int_list(text), expected, "Did not return expected list"
         )
+
+    def test_text_to_grid(self):
+        text = "abc\nhijk\npq"
+        expected = [
+            ["a", "b", "c"],
+            ["h", "i", "j", "k"],
+            ["p", "q"],
+        ]
+        self.assertEqual(
+            text_to_grid(text), expected, "Did not return expected list"
+        )
